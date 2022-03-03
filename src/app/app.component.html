@@ -1,0 +1,63 @@
+<app-header></app-header>
+<div class="container-fluid" *ngIf="load">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Lista de Usuarios</h2>
+     <!-- <ul class="list-group">
+       <li *ngFor="let user of arrayUsers" class="list-group-item"
+        [class.active]="user === UserSelect">
+
+          {{user.name}}  -- {{user.email}}
+
+
+          <a (click)="edit(user)" class="edit cambio" ><i class="material-icons" title="Edit">&#xE254;</i></a>
+
+          <a (click)="deletee(user)" class="delete cambio" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
+       </li>
+     </ul> -->
+      <app-lista-user [arrayUsers]="arrayUsers" (deleteClicked)="listenDelete($event)"
+            (editClicked)="listenEdit($event)"
+      ></app-lista-user>
+    </div>
+    <div class="col-md-6 formi">
+      <h2>Crear un nuevo Usuario</h2>
+      <form action=""class="well form-horizontal formula">
+
+
+      <div class="form-group">
+        <input type="text" [(ngModel)]="UserSelect.name" name="UserSelect.name" placeholder="Ingresa un nombre" id="" class="form-control">
+      </div>
+        <br>
+
+
+      <div class="form-group">
+        <input type="email" [(ngModel)]="UserSelect.email" name="UserSelect.email" placeholder="Ingresa un mail" id="" class="form-control">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="password" [(ngModel)]="UserSelect.password" name="UserSelect.password" placeholder="Ingresa una contraseña" id="" class="form-control">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="UserSelect.phone"
+         name="UserSelect.phone.number" placeholder="+569232300" id="" class="form-control">
+        <br>
+      </div>
+
+      <div class="container-fluid h-100">
+    		<div class="row w-100 align-items-center">
+    			<div class="col text-center">
+    				<!-- <button class="btn btn-danger regular-button"> A regular button </button> -->
+            <button type="submit"  class="btn btn-primary crear" (click)="add()">Crear</button>
+    			</div>
+    		</div>
+
+
+    	</div>
+      <br>
+    </form>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

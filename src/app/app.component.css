@@ -1,0 +1,45 @@
+.container-fluid{
+  min-height: 30vh;
+
+}
+
+h2{
+  margin-top:20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.formula{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit{
+
+  color: yellow;
+}
+.delete{
+  color:red;
+}
+.cambio{
+  margin-left: 30px;
+}
+.cambio:hover{
+  color: aquamarine;
+}
+
+.formi{
+  background-color: rgb(237, 241, 241);
+  border-radius: 10px;
+
+}
+
+.col-md-6 ul {
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col-md-6 ul li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

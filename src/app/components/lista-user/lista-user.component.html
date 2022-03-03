@@ -1,0 +1,29 @@
+
+<div class="table-responsive">
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Acción</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let user of arrayUsers">
+    <tr>
+      <th scope="row">{{user.id}}</th>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td class="text-center">
+
+
+          <a (click)="editWasClicked(user)" class="edit cambio" ><i class="material-icons" title="Edit">&#xE254;</i></a>
+          <a (click)="deleteWasClicked(user)" class="delete cambio" ><i class="material-icons"  title="Delete">&#xE872;</i></a>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
